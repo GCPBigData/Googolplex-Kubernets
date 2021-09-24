@@ -1,0 +1,168 @@
+kubectl get svc
+kubectl get nodes
+
+############################
+Create a Persistent Volume
+kubectl apply -f pv-volume.yaml
+kubectl get pv task-pv-volume
+kubectl get sc,pvc,pv
+#############################
+
+#############################
+Create a Persistent Volume Claim
+kubectl apply -f pvc-claim-dev.yaml
+kubectl get pvc task-pvc-claim-dev
+kubectl get sc,pvc,pv
+#############################
+
+#############################
+Create a Pod
+kubectl apply -f pv-pod.yaml
+kubectl get pod task-pv-pod
+kubectl get sc,pvc,pv
+#############################
+
+#############################
+Limpar
+kubectl delete pv --all
+kubectl delete pvc --all
+kubectl delete pvc task-pvc-claim-dev
+kubectl delete pvc task-pvc-claim-prod
+kubectl delete pv task-pv-volume
+kubectl delete pod task-pv-pod
+sudo rm /mnt/data/index.html
+sudo rmdir /mnt/data
+#############################
+
+#############################
+Apagar
+eksctl delete cluster --name xxxx
+#############################
+
+#############################
+ docker build -t app:v0.1.0 -f Dockerfile .
+ docker tag app:v0.1.0 731735707548.dkr.ecr.us-east-2.amazonaws.com/app:v0.1.0
+ aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 731735707548.dkr.ecr.us-east-2.amazonaws.com
+ docker push 731735707548.dkr.ecr.us-east-2.amazonaws.com/app:v0.1.0
+ 
+ ############################
+ kubectl get pods
+ kubectl apply -f deployment.yaml
+ kubectl apply -f service.yaml
+ kubectl get endpoints
+ kubectl apply -f ingress.yaml
+ kubectl delete pods --all
+ ############################
+ 
+ ############################################
+ eksctl delete cluster -f eksctl-cluster.yaml
+ ############################################
+ 
+ ############################################ 
+ kubectl config get-contexts
+ kubectl config current-context
+ kubectl config use-context arn:aws:eks:us-west-2:731735707548:cluster/demo-eks-cluster-sg-v2
+ kubectl config use-context arn:aws:iam::731735707548:role/EKS_Cluster_POC_Joice
+ kubectl config use-context i-0264db1e6c33475d6@demo-eks-cluster.us-west-2.eksctl.io
+ ############################################
+ 
+ *****************************************
+ kubectl apply -f sample-service.yml  
+ kubectl get service
+ kubectl apply -f nginxdeploy-demo.yml
+ kubectl get deployment
+ kubectl get pod
+ kubectl get rs
+ kubectl get node
+ a934c252c0f7d4a5c99ff252d703df02-1228482594.us-west-2.elb.amazonaws.com
+ 
+ kubectl delete --all deployments
+ kubectl delete --all 
+ 
+ *****************************************
+ demo-eks-cluster-sg-v2
+ 
+ aws eks --region us-east-2 update-kubeconfig --name  
+ kubectl config set-context --current --namespace=zen
+ 
+ kubectl -n nginx-namespace get pods
+ 
+*********************************************
+aws eks --region us-east-2 update-kubeconfig --name arn:aws:eks:us-west-2:731735707548:cluster/demo-eks-cluster-sg-v2
+aws eks --region us-east-2 update-kubeconfig --name arn:aws:eks:us-west-2:731735707548:cluster/teste-eks
+*********************************************
+
+
+aws eks create-cluster \
+   --region us-east-2 \
+   --name demo-eks-oi \
+   --kubernetes-version <1.19> \
+   --role-arn arn:aws:eks:us-west-2:731735707548:cluster \
+   --resources-vpc-config subnetIds=subnet-00c1a5ed873458151,subnet-0c42211e3720fadb4,subnet-01d200820a53985b9,subnet-086fdceae8eba29f9,securityGroupIds=node-group-eks-backend-dev
+   
+    {
+    "Account": "731735707548", 
+    "UserId": "AROA2UXWYZ6OKYLQ6XS3Q:i-0264db1e6c33475d6", 
+    "Arn": "arn:aws:sts::731735707548:assumed-role/cloud9-demo-eks-ecs-admin-role/i-0264db1e6c33475d6"
+}
+
+subnet-01d200820a53985b9, subnet-00c1a5ed873458151] 
+
+ kubectl -n logs <pod-name> 
+ kubectl -n logs <pod-name> --container <container-name>.
+
+
+https://ipsense-corp.awsapps.com/start#/
+
+****************************
+aws --version
+ekscrl version
+kubectl version
+****************************
+
+############################
+Create a Persistent Volume
+kubectl apply -f pv-volume.yaml
+kubectl get pv task-pv-volume
+kubectl get sc,pvc,pv
+#############################
+
+#############################
+Create a Persistent Volume Claim
+kubectl apply -f pvc-claim-dev.yaml
+kubectl get pvc task-pvc-claim-dev
+kubectl get sc,pvc,pv
+#############################
+
+#############################
+Create a Pod
+kubectl apply -f pv-pod.yaml
+kubectl get pod task-pv-pod
+kubectl get sc,pvc,pv
+#############################
+
+*****************************************
+ kubectl apply -f nginx-service-demo.yml 
+ kubectl apply -f nginxdeploy-demo.yml
+ 
+ kubectl get namespaces
+ kubectl config set-context --current --namespace=nginx-namespace
+ 
+ "i-0264db1e6c33475d6@demo-eks-cluster.us-west-2.eksctl.io
+ 
+ kubectl get service
+ kubectl get deployment
+ kubectl get pod
+ kubectl get rs
+ kubectl get svc
+ kubectl get nodes
+ kubectl get node
+  
+ a934c252c0f7d4a5c99ff252d703df02-1228482594.us-west-2.elb.amazonaws.com
+ 
+ kubectl delete --all deployments
+ kubectl delete --all service
+ kubectl delete --all node
+ kubectl delete --all pod
+ 
+ *****************************************

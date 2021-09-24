@@ -1,0 +1,124 @@
+adb devices
+adb devices -l
+adb -s DEVICE-ID install -r oculus101.apk
+adb install -r oculus101.apk
+adb -s 192.168.1.82:5555 shell pm list packages -f
+adb -s DEVICE-ID uninstall com.example.oculus101
+adb uninstall 192.168.1.82:5555 com.oculus.UnitySample
+adb uninstall 192.168.1.82:5555 com.vrentertain.vrfishing
+
+adb -s 1KWPH8016J9163 shell pm list packages -f
+adb uninstall com.unity3d.Interactive360Sample
+ 
+
+https://ipsense-corp.awsapps.com/login/?client_id=3bec6266d4c83882&redirect_uri=https%3A%2F%2Fipsense-corp.awsapps.com%2Fstart%2F&organization=ipsense-corp&state=QVlBQmVMRFZZd2RRaFpBWEg5RWpxWHVtL0RNQUlnQUJBQk5FWVhSaFVHeGhibVZUZEdGMFpWQmhjbUZ0QUFsUVpYSmxaM0pwYm1VQUFRQUhZWGR6TFd0dGN3QkxZWEp1T21GM2N6cHJiWE02ZFhNdFpXRnpkQzB4T2pJM05qYzROemd6T1RZNU5qcHJaWGt2TVRSbFlXTXdNelV0TUdKaVpDMDBNalZqTFdGaFptSXRNRGRpT0RVNVpUUTNNMk0wQUxnQkFnRUFlTzlER0s5ME9CYkFFWWFLckF2NC92RWwvVDVmclhSejYva0dBQktndGd5ekFWMGRRZDVJUHFtMHkrMXFESm40OFNBQUFBQitNSHdHQ1NxR1NJYjNEUUVIQnFCdk1HMENBUUF3YUFZSktvWklodmNOQVFjQk1CNEdDV0NHU0FGbEF3UUJMakFSQkF3TDBOS2pZK1oyWDJmbXJoa0NBUkNBTzZoUHFUbkE5R1NwSG1ieDBydnJNekZUWWQxTE9ub2RvSm9mM1pBQmZDTk9BejlkYlFMUldwTDhneFRza2xCQ0QyZ2ducG1DcFc4NkxvcnFBZ0FBQUFBTUFBQVFBQUFBQUFBQUFBQUFBQUFBQUFvdFFBZ2liMG9oRWs3UEVvTjE0MFQvLy8vL0FBQUFBUUFBQUFBQUFBQUFBQUFBQVFBQUFGU0tJZnlVUkROakdObENaalRIei9TU041TC9Ja1cvRHNYVFNURWlQWnh3ZlFibGV0N0t6eE92aWlxSWpPV3ltS3R6aWNTb3ViNkRRV2ZXODdBdU96SGZmOHRSR1Jpa1BuYmRYa0FFc2tKNklBQk5hQy9XcjVVK0UyOGtqd3BEQVdYSFVHVWk%3D
+
+numero
+multiview-ipsense
+https://ipsense-corp.awsapps.com/start#/
+
+
+https://ipsense-corp.awsapps.com/start#/
+------------jose.ribamar Debian23@
+
+https://us-east-1.signin.aws/platform/login?workflowStateHandle=f82340db-666e-42bf-b4bc-5f2dd3b5ca9c
+
+https://us-east-1.signin.aws/platform/login?workflowStateHandle=36e93646-2a4c-4ffb-bb63-ded63c8d4e36
+
+Conta: 731735707548
+ROle: multiview-ipsense
+
+cloud9 - kubctl
+
+demo-eks-ecs-vpc
+
+Role: demo-ecs-cluster-ec2
+
+demo-eks-cluster-sg
+
+Acess Key ID
+Secret Access Key
+
+aws eks --region us-west-2 describe-cluster --name demo-eks-cluster-sg-v2 --query cluster.status
+aws eks --region us-west-2 describe-cluster --name demo-eks-cluster-sg-v2
+aws eks list-nodegroups --cluster-name demo-eks-cluster-sg-v2
+aws eks update-kubeconfig --name demo-eks-cluster-sg-v2
+nano /home/ec2-user/.kube/config  
+
+aws-iam-authenticator help
+kubectl version --short --client
+kubectl get nodes
+kubectl get nodes --watch
+kubectl get services -o wide
+kubectl describe svc demo-eks-ecs-c9
+
+kubectl apply -f 
+
+
+####eks-node-group
+
+node-group-eks-backend-prod
+node-group-eks-backend-dev
+node-group-eks-backend-homo
+
+
+##
+aws eks update-kubeconfig \
+  --region us-west-2 \
+  --name demo-eks-cluster-sg-v2
+
+##
+kubectl get svc
+aws sts get-caller-identity
+{
+    "Account": "731735707548", 
+    "UserId": "AROA2UXWYZ6OKYLQ6XS3Q:i-0264db1e6c33475d6", 
+    "Arn": "arn:aws:sts::731735707548:assumed-role/cloud9-demo-eks-ecs-admin-role/i-0264db1e6c33475d6"
+}
+
+ aws eks update-kubeconfig --name demo-eks-cluster-sg-v2 --region us-west-2
+ aws eks update-kubeconfig --name demo-eks-cluster-sg-v2 --region us-west-2 --role-arn arn:aws:sts::731735707548:assumed-role/cloud9-demo-eks-ecs-admin-role/i-0264db1e6c33475d6
+ kubectl get svc
+ kubectl config view --minify
+ aws sts get-caller-identity
+ nano ~/.aws/config
+##
+
+
+## autorizacao kubctl - cloudformation-autorizacao-kubctl-eks
+aws --region us-west-2 eks update-kubeconfig --name demo-eks-cluster-sg-v2 --role-arn arn:aws:iam::731735707548:role/<role_name>
+
+aws cloudformation create-stack \
+  --stack-name my-eks-vpc-stack \
+  --template-url https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml
+  
+  
+   
+aws eks update-kubeconfig --name demo-eks-cluster-sg-v2 --region us-west-2 --role-arn arn:aws:sts::731735707548:assumed-role/cloud9-demo-eks-ecs-admin-role/i-0264db1e6c33475d6
+
+##########################
+myAmazonEKSClusterRole 
+
+
+aws eks update-kubeconfig \
+  --region us-west-2 \
+  --name my-cluster
+  
+#########################
+
+aws cloudformation create-stack \
+  --stack-name demo-eks-ecs-vpc \
+  --template-url https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml
+  
+  aws eks update-kubeconfig \
+  --region us-west-2 \
+  --name demo-eks-cluster-sg-v2
+  
+  aws eks update-kubeconfig --name demo-eks-cluster-sg-v2 --region us-west-2
+  
+  aws eks update-kubeconfig --name demo-eks-cluster-sg-v2 --region us-west-2 --role-arn arn:aws:sts::731735707548:assumed-role/multiview-ipsense/julio@ipsense.com.br
+  aws eks update-kubeconfig --name demo-eks-cluster-sg-v2 --region us-west-2 --role-arn arn:aws:sts::731735707548:assumed-role/cloud9-demo-eks-ecs-admin-role/i-0264db1e6c33475d6
+  
+  nano ~/.aws/config
+  
+  kubectl config view --minify
